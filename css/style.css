@@ -1,0 +1,273 @@
+
+/*------------------------------------*\
+	$RESET
+\*------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*------------------------------------*\
+	Element 
+\*------------------------------------*/
+
+body{
+	background-color:#E6E7E2;
+	font-family: cursive;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	font-size:30px;
+	color:#8b0000;
+}
+
+/*------------------------------------*\
+	$Block-Header
+\*------------------------------------*/
+
+#header{
+	width:auto;
+	height:auto;
+			 background-color:#8b0000;
+}
+#header ul{
+	/*將ul預設的margin清除*/
+	margin : 0px;
+
+	/*將ul預設的margin清除*/
+	padding : 15px 0;
+
+	/*將ul裡的東東水平置中*/
+	text-align:center;
+}
+
+#header ul li{          
+	margin:0 30px;
+	display: inline-block;                        
+}
+
+#header ul li a{
+	/*設定位置與大小的通常寫最上面
+	display設block是為了變得和li一樣
+	*/
+	display: block;
+	padding: 10px 10px;
+
+  /*再來是樣式*/
+	background-color:#8b0000;
+	color:white;
+	font-size: 20px;
+	font-family: cursive;
+	text-decoration:none; 
+
+	/*最後是這種需要用-webkit這種的*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#header li :hover{
+	color:black;
+	background-color: white;                      
+}
+
+/*------------------------------------*\
+	$Block-Container
+\*------------------------------------*/
+
+#container {
+	height:550px;
+	padding :0px 60px 60px 60px;
+}
+
+#container h1 {
+	text-align:center;
+	margin:20px;
+	font-size:30px;
+	color: #8b0000;
+}
+
+
+/*------------------------------------*\
+	$Block-Container-content
+\*------------------------------------*/
+
+#content {
+	float:left;
+	width:70%;	
+
+	background-color:white;
+}
+
+#content h2 {
+	margin:20px 20px 0px 20px;
+	
+	color:#8b0000;
+	font-family: cursive;
+	font-size:20px;
+}
+
+#content img {
+	height:300px;
+	margin:20px 20px 0px 20px;
+	box-shadow:0px 1px 5px 0px rgba(0,0,0,23.1);
+}
+
+#content p {
+	margin:20px;
+	font-size:16px;
+}
+
+/*------------------------------------*\
+	$Block-Container-sidebar
+\*------------------------------------*/
+
+#sidebar {
+	float:left;
+	width:30%;
+}
+
+.active {
+	background-color:#8b0000;
+}
+ .sidebar-box {
+	margin:0px 0px 30px 30px;
+	height:100px;
+	text-align:center;
+
+	background-color:#AAAAAA;
+	
+}
+
+#sidebar a {
+	display:inline-block;
+	margin:1em;
+
+	color:#ffffff;
+	font-size:1.5em;
+	text-decoration:none;
+
+}
+
+
+/*------------------------------------*\
+	$Flip
+\*------------------------------------*/
+
+.filp-container {
+	perspective:1000;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform:rotateY(180deg);
+}
+
+.flipper {
+	transition:0.6s;
+	transform-style: preserve-3d;
+	position:relative;
+}
+
+.flip-container, .front, .back {
+	width:480px;
+	height:330px;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.front {
+	z-index: 2;
+}
+
+.back {
+	transform:rotateY(180deg);
+}
+
+/*------------------------------------*\
+	$Block-Gallery
+\*------------------------------------*/
+
+#gallery header {
+	text-align:center;
+	margin: 50px 50px 0px 50px;
+}
+
+#gallery-list {
+	margin:50px;
+	padding:50px;
+	background:white;
+	text-align:center;
+}
+
+#gallery-list img {
+	width:300px;
+	height:200px;
+	margin:20px;
+
+	box-shadow:0px 1px 5px 0px rgba(0,0,0,23.1);
+	cursor:pointer;
+}
+
+
+/*------------------------------------*\
+	$Else
+\*------------------------------------*/
+
+.block {
+	width:100%;
+	height:50px;
+	clear:left;	
+	background-color:#8b0000;
+}
+
+
+
