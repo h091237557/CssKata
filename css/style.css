@@ -61,6 +61,9 @@ img {
 }
 
 header {
+	margin:30px;
+	text-align:center;
+
 	font-size:30px;
 	color:#8b0000;
 }
@@ -72,7 +75,7 @@ header {
 #header{
 	width:auto;
 	height:auto;
-			 background-color:#8b0000;
+	background-color:#8b0000;
 }
 #header ul{
 	/*將ul預設的margin清除*/
@@ -199,7 +202,7 @@ header {
 \*------------------------------------*/
 
 .filp-container {
-	perspective:1000;
+	perspective:1500;
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -236,16 +239,14 @@ header {
 	$Block-Gallery
 \*------------------------------------*/
 
-#gallery header {
-	text-align:center;
-	margin: 50px 50px 0px 50px;
+#gallery {
+	padding:0 60px 60px 60px;
 }
 
 #gallery-list {
-	margin:50px;
-	padding:50px;
-	background:white;
 	text-align:center;
+
+	background:white;
 }
 
 #gallery-list img {
@@ -255,121 +256,6 @@ header {
 
 	box-shadow:0px 1px 5px 0px rgba(0,0,0,23.1);
 	cursor:pointer;
-}
-
-/*------------------------------------*\
-	$Block-Cube
-\*------------------------------------*/
-
-.wrap {
-	margin:200px 0 0 200px;
-
-  -moz-perspective: 720px;
-  -moz-perspective-origin: 50% 90px;
-  
-  -webkit-perspective: 720px;
-  -webkit-perspective-origin: 40% 90px;
-
-}
-
-.cube {
-	position:relative;
-	width:180px;
-	-webkit-transform-style: preserve-3d;
-}
-
-.pane {
-  position: absolute;
-  background: #eee;
-  width: 180px;
-  height: 180px;
-}
-
-.pane div {
-  margin: 0;
-  width: 56px;
-  height: 56px;
-  line-height: 58px;
-  vertical-align: middle;
-  border: 2px solid #ddd;
-  display: inline-block;
-}
-
-.back-pane {
-	-moz-transform: translateZ(-90px) rotateY(180deg);
-	-webkit-transform: translateZ(-90px) rotateY(180deg);
-}
-.right-pane {
-	-moz-transform: rotateY(-270deg) translateX(90px);
-	-moz-transform-origin: top right;
-
-  -webkit-transform: rotateY(-270deg) translateX(90px);
-	-webkit-transform-origin: top right;
-}
-.left-pane {
-	-moz-transform: rotateY(270deg) translateX(-90px);
-	-moz-transform-origin: center left;
-
-  -webkit-transform: rotateY(270deg) translateX(-90px);
-	-webkit-transform-origin: center left;
-}
-.top-pane {
-	-moz-transform: rotateX(-90deg) translateY(-90px);
-	-moz-transform-origin: top center;
-
-  -webkit-transform: rotateX(-90deg) translateY(-90px);
-	-webkit-transform-origin: top center;
-}
-.bottom-pane {
-	-moz-transform: rotateX(90deg) translateY(90px);
-	-moz-transform-origin: bottom center;
-
-  -webkit-transform: rotateX(90deg) translateY(90px);
-	-webkit-transform-origin: bottom center;
-}
-.front-pane {
-	-moz-transform: translateZ(90px);
-
-  -webkit-transform: translateZ(90px);
-}
-
-.front-pane div {
-  background-color: #C41E3A;
-}
-
-.back-pane div {
-  background-color: #FF5800;
-}
-
-.left-pane div {
-  background-color: #0051BA;
-}
-
-.right-pane div {
-  background-color: #fff;
-}
-
-.bottom-pane div {
-  background-color: #009E60;
-}
-
-.top-pane div {
-  background-color: #FFD500;
-}
-
-@-webkit-keyframes spin {
-	from { -webkit-transform: rotateY(0); }
-	to { -webkit-transform: rotateY(360deg); }
-}
-
-@-moz-keyframes spin {
-	from { -moz-transform: rotateY(0); }
-	to { -moz-transform: rotateY(360deg); }
-}
-
-.cube {
-	-moz-animation: spin 5s infinite linear;
-	-webkit-animation: spin 5s infinite linear;
 }
 
 /*------------------------------------*\
